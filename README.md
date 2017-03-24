@@ -1,2 +1,2 @@
 # TNR
-Experimental chatbot written in Python. Just for fun.
+Experimental chatbot written in Python 3.6. Just for fun.

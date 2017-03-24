@@ -1,5 +1,4 @@
-import nltk
-import random
+import nltk, random
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 lancaster_stemmer = nltk.stem.lancaster.LancasterStemmer()
 
@@ -18,6 +17,7 @@ def getResponse(user_input):
     return response
 
 def getPOS(sentance):
+    #toeknizes a sentance and returns a dictionary
     words = nltk.word_tokenize(sentance)
     words_pos = nltk.pos_tag(words)
     nouns = [word for word,pos in words_pos if (pos == 'NN') or (pos == 'NNP') or  (pos == 'NNS')]
@@ -81,5 +81,5 @@ def findMatch(sentance):
 
     #if there is no match found in the corpus file.
     if top_response == 0:
-        top_response = "I'm Gay"
+        top_response = "Hello"
     return top_response
